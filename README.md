@@ -25,3 +25,30 @@
           - videos
         - README.md
 ```
+
+## Project structure
+
+```bash
+.
+├── scripts
+│   └── build.sh
+├── src
+│   ├── blogs
+│   │   └── blog01
+│   │       ├── assets
+│   │       └── README.md
+│   └── pages
+│       └── home
+│           └── README.md
+├── ssg.sh
+└── tempate
+    ├── assets
+    │   ├── css
+    │   │   ├── index.css
+    │   │   └── tailwind
+    │   └── js
+    │       └── index.js
+    └── index.html
+```
+
+> More Coming soon :)
