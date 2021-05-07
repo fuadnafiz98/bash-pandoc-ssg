@@ -1,3 +1,8 @@
+# TODOs
+
+- [ ] add assets in per blog and check
+- [ ] figure out how to add meta tag in _meta folder
+
 # Bash + Pandoc Static Site Generator 
 
 ## Folder Structure
@@ -52,3 +57,4 @@
 ```
 
 > More Coming soon :)
+

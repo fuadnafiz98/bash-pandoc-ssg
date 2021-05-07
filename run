@@ -1,0 +1,23 @@
+#!/bin/bash
+
+declare -A newmap
+
+newmap[echo]="echo hello"
+newmap[run]="./ssg.sh"
+newmap[serve]="live-server template/"
+newmap[start]="live-server blk/"
+
+check=${newmap[$1]}
+
+if test -z "$check"
+then
+  echo "wrong input!!"
+else
+  echo $1
+
+  echo ${newmap[$1]}
+
+  ${newmap[$1]}
+
+fi
+
