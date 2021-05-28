@@ -1,6 +1,8 @@
 ---
-title: how to setup tailwindcss with react.js
-
+title: Command line todo application with vim and mdcat
+tag: "img tag"
+thumbnail: "https://link.com"
+url: "my-first-blog"
 ...
 
 ## What is pandoc 

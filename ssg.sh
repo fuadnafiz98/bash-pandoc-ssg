@@ -2,8 +2,7 @@
 
 # folder setup 
 
-# : '
-# '
+: '
 rm -rfd blk/**/*
 mkdir -p blk/blogs/_meta
 mkdir -p blk/_assets/
@@ -53,15 +52,40 @@ for file in src/blogs/_meta/*.md; do
 done
 
 mkdir -p blk/blogs/contents
-for file in src/blogs/contents/**/*.md; do
-  echo $file
-  dir=$(dirname $file)
-  dir="${dir:4}" 
-  mkdir -p blk/$dir
-  echo $dir
-  # echo pandoc -s "${file}" -o blk/"${dir}"/index.html --template=template/pages/blog.html
-  cp -r src/"${dir}"/assets blk/"${dir}/assets" 2>/dev/null
-  pandoc -s "${file}" -o blk/"${dir}"/index.html --template=template/_pages/_blog.html
-done
+# for file in src/blogs/contents/**/*.md; do
+#   echo $file
+#   dir=$(dirname $file)
+#   dir="${dir:4}" 
+#   mkdir -p blk/$dir
+#   # echo $dir
+#   # echo pandoc -s "${file}" -o blk/"${dir}"/index.html --template=template/pages/blog.html
+#   cp -r src/"${dir}"/assets blk/"${dir}/assets" 2>/dev/null
+#   pandoc -s "${file}" -o blk/"${dir}"/index.html --template=template/_pages/_blog.html
+# done
 
 # cd template/assets/tailwind && yarn tw:dev
+
+'
+rm meta/data.json 
+echo "{\"links\": []}" > meta/data.json
+
+for file in src/blogs/contents/**/*.md; do
+  echo $file
+  data=$(pandoc --template=./scripts/metadata.pandoc $file | jq)
+  echo $data
+  cat meta/data.json | jq ".links += [$data]" >> meta/d.json && mv meta/d.json meta/data.json 
+done
+
+
+jq -c '.links[]' meta/data.json | while read i;
+do
+  # read title thumbnail url < <()
+  title=$(echo $i | jq -r '.title')
+  thumbnail=$(echo $i | jq -r '.thumbnail')
+  url=$(echo $i | jq -r '.url')
+  # read thumbnail url < <$(echo $i | jq -r '.thumbnail, .url'); dont' work
+  echo $title;
+  echo $thumbnail;
+  echo $url;
+done
+

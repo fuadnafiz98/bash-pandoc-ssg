@@ -5,6 +5,25 @@
 
 # Bash + Pandoc Static Site Generator 
 
+## Tutorial
+
+* add new item to json array
+`$ cat meta/data.json | jq '.links += [{ "name": "fuad" }]' >> meta/d.json && mv meta/d.json meta/data.json`
+
+
+
+## Check this out!!
+
+```bash
+$ pandoc --template=./scripts/metadata.pandoc src/blogs/contents/my-first-blog/README.md | jq
+
+``
+
+
+* and [this](https://stackoverflow.com/questions/42245288/add-new-element-to-existing-json-array-with-jq)
+* Learn [JQ](https://www.baeldung.com/linux/jq-command-json)
+
+
 ## Folder Structure
 
 ```bash
@@ -14,7 +33,7 @@
     - index.html
     - assets
       - index.css
-      - index.js
+     - index.js
   - pages
     - home
       - README.md

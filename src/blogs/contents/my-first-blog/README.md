@@ -1,6 +1,8 @@
 ---
-title: My first blog
-
+title: Command line todo application with vim and mdcat
+tag: "img tag"
+thumbnail: "https://link.com"
+url: "my-first-blog"
 ...
 
 ## This is my first blog
