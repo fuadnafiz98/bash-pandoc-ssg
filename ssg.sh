@@ -66,6 +66,7 @@ mkdir -p blk/blogs/contents
 # cd template/assets/tailwind && yarn tw:dev
 
 '
+
 rm meta/data.json 
 echo "{\"links\": []}" > meta/data.json
 
@@ -76,16 +77,18 @@ for file in src/blogs/contents/**/*.md; do
   cat meta/data.json | jq ".links += [$data]" >> meta/d.json && mv meta/d.json meta/data.json 
 done
 
+# Read data from metadata.json file 
+# $ pandoc -s test.md -o out.html --template=test.html --metadata-file=data.json
 
-jq -c '.links[]' meta/data.json | while read i;
-do
-  # read title thumbnail url < <()
-  title=$(echo $i | jq -r '.title')
-  thumbnail=$(echo $i | jq -r '.thumbnail')
-  url=$(echo $i | jq -r '.url')
-  # read thumbnail url < <$(echo $i | jq -r '.thumbnail, .url'); dont' work
-  echo $title;
-  echo $thumbnail;
-  echo $url;
-done
+# jq -c '.links[]' meta/data.json | while read i;
+# do
+#   # read title thumbnail url < <()
+#   title=$(echo $i | jq -r '.title')
+#   thumbnail=$(echo $i | jq -r '.thumbnail')
+#   url=$(echo $i | jq -r '.url')
+#   # read thumbnail url < <$(echo $i | jq -r '.thumbnail, .url'); dont' work
+#   echo $title;
+#   echo $thumbnail;
+#   echo $url;
+# done
 

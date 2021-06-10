@@ -1,0 +1,14 @@
+{
+  "links": [
+    {
+      "title": "First Blog",
+      "thumbnail": "https://link.com",
+      "url": "first-blog"
+    },
+    {
+      "title": "second Blog",
+      "thumbnail": "https://link.com",
+      "url": "second-blog"
+    }
+  ]
+}
