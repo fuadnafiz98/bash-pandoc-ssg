@@ -20,6 +20,7 @@ for file in src/blogs/**/*.md; do
 
   data=$(pandoc --template=pandoc/metadata.pandoc $file | jq)
   echo $data
+
   cat out/metadata/data.json | jq ".links += [$data]" >> out/metadata/d.json && mv out/metadata/d.json out/metadata/data.json 
 done
 
