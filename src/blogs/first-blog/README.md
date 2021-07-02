@@ -1,6 +1,6 @@
 ---
 title: First Blog
-thumbnail: "https://link.com"
+thumbnail: "./assets/img.jpeg"
 url: "first-blog"
 ...
 
@@ -8,4 +8,4 @@ url: "first-blog"
 
 this is awesome
 
-![jp](assets/img.png)
+![jp](./assets/img.jpeg)

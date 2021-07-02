@@ -1,6 +1,6 @@
 ---
 title: second Blog
-thumbnail: "https://link.com"
+thumbnail: ""
 url: "second-blog"
 ...
 
