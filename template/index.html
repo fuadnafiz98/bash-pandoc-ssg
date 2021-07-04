@@ -12,11 +12,18 @@
 <body>
   ${body}
 
+  <div class="blogs">
   $for(links)$
-  <strong>${links.title}</strong>
-  <img src="/blogs/${links.url}/${links.thumbnail}" alt="${links.title}" />
-  <a href="/blogs/${links.url}">${links.url}</a>
+  <div class="blog">
+    <img src="/blogs/${links.url}/${links.thumbnail}" alt="${links.title}" />
+    <div class="blog__left">
+      <strong>${links.title}</strong>
+      <a href="/blogs/${links.url}">${links.url}</a>
+    </div>
+  </div>
   $endfor$
+  </div>
+
   <script src="/assets/js/index.js"></script>
 </body>
 
