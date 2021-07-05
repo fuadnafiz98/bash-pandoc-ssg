@@ -24,9 +24,9 @@ jobs:
       - name: ls it
         run : ls -lah out
       - name: clone the website
-        run : git clone https://github.com/fuadnafiz98/notes.git
+        run : cd .. && git clone https://github.com/fuadnafiz98/notes.git && cd notes
       - name: move files 
-        run : mv out/* notes/ && cd notes && ls -lah 
+        run : mv ../bash-pandoc-ssg/out/* . && ls -lah 
       - name: push it?
         run : git add . && git commit -m "new site deployed" && git remote add origin https://github.com/fuadnafiz98/notes.git && git push origin master
 
