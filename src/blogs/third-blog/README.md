@@ -1,6 +1,6 @@
 ---
 title: third Blog
-thumbnail: "./assets/deep-space-nebula-stars-41162656.jpg"
+thumbnail: "assets/deep-space-nebula-stars-41162656.jpg"
 url: "third-blog"
 ...
 
@@ -8,4 +8,4 @@ url: "third-blog"
 
 this is awesome
 
-![HAIL!](./assets/deep-space-nebula-stars-41162656.jpg)
+![HAIL!](assets/deep-space-nebula-stars-41162656.jpg)

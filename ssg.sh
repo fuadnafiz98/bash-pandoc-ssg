@@ -3,7 +3,7 @@
 rm -rfd out/**/* 2>/dev/null
 mkdir -p out/metadata
 mkdir -p out/assets
-# mkdir -p out/blogs/assets
+mkdir -p out/blogs/assets
 
 cp -r template/assets/* out/assets/
 
@@ -18,7 +18,11 @@ for file in src/blogs/**/*.md; do
   mkdir -p out/"${dir}"/assets
 
   pandoc -s "${file}" -o out/"${dir}"/index.html --template=template/blog.html
-  cp -r src/"${dir}"/assets/* out/"${dir}"/assets 2>/dev/null
+
+  # cp -r src/"${dir}"/assets/* out/assets 2>/dev/null
+  # cp -r src/"${dir}"/assets/* out/"${dir}"/assets 2>/dev/null
+  # cp -r src/"${dir}"/assets/* out/blogs/"${dir}"/assets 2>/dev/null
+  cp -r src/"${dir}"/assets/* out/blogs/assets 2>/dev/null
 
   data=$(pandoc --template=pandoc/metadata.pandoc $file | jq)
   echo $data

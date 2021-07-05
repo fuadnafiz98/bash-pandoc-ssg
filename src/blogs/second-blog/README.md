@@ -1,6 +1,6 @@
 ---
 title: second Blog
-thumbnail: ""
+thumbnail: "assets/img.jpeg"
 url: "second-blog"
 ...
 
