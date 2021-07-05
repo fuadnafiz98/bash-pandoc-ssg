@@ -51,3 +51,13 @@ bash ssg.sh
 > Make sure you have **pandoc**, **jq** installed.
 
 the Output will be stored in `out` folder.
+
+
+### What will be the deployment progress.
+
+1. I will have a `blogs` folder
+1. I will write various blogs on it. 
+1. then I will push it on github.
+1. in the workflow it will clone it, install all the dependencies.
+1. run the build command to build the `out` folder. 
+. deploy the `out` folder to `microsoft static server`

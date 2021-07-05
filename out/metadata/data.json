@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "title": "First Blog",
+      "thumbnail": "./assets/img.jpeg",
+      "url": "first-blog"
+    },
+    {
+      "title": "second Blog",
+      "thumbnail": "assets/img.jpeg",
+      "url": "second-blog"
+    },
+    {
+      "title": "third Blog",
+      "thumbnail": "assets/deep-space-nebula-stars-41162656.jpg",
+      "url": "third-blog"
+    }
+  ]
+}
