@@ -1,0 +1,13 @@
+name: deploy
+
+on: push
+
+jobs: 
+  test:
+    name: test job
+    runs-on: ubuntu-20.04
+    steps:
+      - name: step-00
+        uses: actions/checkout@v2
+      - name: step-01
+        run : echo "hello world" 
