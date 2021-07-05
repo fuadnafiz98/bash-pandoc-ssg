@@ -21,7 +21,7 @@ for file in src/blogs/**/*.md; do
 
   # cp -r src/"${dir}"/assets/* out/assets 2>/dev/null
   # cp -r src/"${dir}"/assets/* out/"${dir}"/assets 2>/dev/null
-  # cp -r src/"${dir}"/assets/* out/blogs/"${dir}"/assets 2>/dev/null
+  cp -r src/"${dir}"/assets/* out/blogs/"${dir}"/assets 2>/dev/null
   cp -r src/"${dir}"/assets/* out/blogs/assets 2>/dev/null
 
   data=$(pandoc --template=pandoc/metadata.pandoc $file | jq)
