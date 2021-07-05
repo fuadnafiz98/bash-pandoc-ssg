@@ -10,4 +10,12 @@ jobs:
       - name: step-00
         uses: actions/checkout@v2
       - name: step-01
-        run : echo "hello world" 
+        run : apt update && apt upgrade
+      - name: step-02
+        run : apt install pandoc jq git curl
+      - name: download & install pandoc
+        run : curl -L https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb > pandoc.deb && dpkg -i pandoc.deb
+      - name: download & install jq
+        run : curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 > /usr/bin/jq && chmod +x /usr/bin/jq
+      - name: where is my repo?
+        run: ls -lah
