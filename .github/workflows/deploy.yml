@@ -12,7 +12,7 @@ jobs:
       - name: step-01
         run : sudo apt update && sudo apt upgrade
       - name: step-02
-        run : sudo apt install curl
+        run : sudo apt install git curl
       - name: download & install pandoc
         run : sudo curl -L https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb > pandoc.deb && sudo dpkg -i pandoc.deb
       - name: download & install jq
@@ -23,3 +23,9 @@ jobs:
         run : bash ssg.sh
       - name: ls it
         run : ls -lah out
+      - name: clone the website
+        run : git clone https://github.com/fuadnafiz98/notes.git
+      - name: move files 
+        run : mv out/* notes/ && cd notes && ls -lah 
+      - name: push it?
+        run : git add . && git commit -m "new site deployed" && git push origin master
