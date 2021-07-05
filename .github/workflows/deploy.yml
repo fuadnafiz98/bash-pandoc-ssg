@@ -9,15 +9,17 @@ jobs:
     steps:
       - name: step-00
         uses: actions/checkout@v2
-      # - name: step-01
-      #   run : sudo apt update && sudo apt upgrade
-      # - name: step-02
-      #   run : sudo apt install git curl
-      # - name: download & install pandoc
-      #   run : sudo curl -L https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb > pandoc.deb && sudo dpkg -i pandoc.deb
-      # - name: download & install jq
-      #   run : sudo curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 > /usr/bin/jq && sudo chmod +x /usr/bin/jq
-      - name: test
-        run : touch tt && sudo cp tt /usr/bin/
+      - name: step-01
+        run : sudo apt update && sudo apt upgrade
+      - name: step-02
+        run : sudo apt install curl
+      - name: download & install pandoc
+        run : sudo curl -L https://github.com/jgm/pandoc/releases/download/2.14.0.3/pandoc-2.14.0.3-1-amd64.deb > pandoc.deb && sudo dpkg -i pandoc.deb
+      - name: download & install jq
+        run : sudo curl -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 > jq && sudo cp jq /usr/bin/jq && sudo chmod +x /usr/bin/jq
       - name: where is my repo?
-        run: ls -lah
+        run : ls -lah
+      - name: build it!
+        run : bash ssg.sh
+      - name: ls it
+        run : ls -lah out
