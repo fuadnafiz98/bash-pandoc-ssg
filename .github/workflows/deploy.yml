@@ -28,4 +28,5 @@ jobs:
       - name: move files 
         run : mv out/* notes/ && cd notes && ls -lah 
       - name: push it?
-        run : git add . && git commit -m "new site deployed" && git push origin master
+        run : git add . && git commit -m "new site deployed" && git remote add origin https://github.com/fuadnafiz98/notes.git && git push origin master
+
