@@ -12,4 +12,9 @@ RUN mkdir /app
 
 WORKDIR /app
 
+RUN git clone https://github.com/fuadnafiz98/bash-pandoc-ssg.git  .
+
+RUN rm -rfd src
+
 CMD bash ssg.sh
+# CMD ls -lah /app/src

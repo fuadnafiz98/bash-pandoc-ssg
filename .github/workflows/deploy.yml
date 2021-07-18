@@ -1,3 +1,15 @@
+name: deploy
+on: push
+jobs: 
+  test:
+    name: testing if docker exists
+    runs-on: ubuntu-20.04
+    steps: 
+      - name: step
+        run: docker --version
+
+
+
 # name: deploy
 
 # on: push
