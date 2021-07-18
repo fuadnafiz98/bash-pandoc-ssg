@@ -13,8 +13,11 @@ jobs:
         run:  docker pull fuadnafiz98/bps:0.2
       - name: generating output
         run:  docker run -v "$(pwd)":/app fuadnafiz98/bps:0.2
-      - name: check output
-        run:  ls -lah out
+      - name: deploy website 
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: out
         
 
 
