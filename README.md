@@ -74,4 +74,4 @@ $ docker run -v "$(pwd)":/app ssg:latest
 1. I first write blogs on `blogs` folder
 1. push the markdown files on github
 1. in github action:
-  1. 
+  1. second
