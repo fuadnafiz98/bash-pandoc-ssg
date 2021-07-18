@@ -60,4 +60,18 @@ the Output will be stored in `out` folder.
 1. then I will push it on github.
 1. in the workflow it will clone it, install all the dependencies.
 1. run the build command to build the `out` folder. 
-. deploy the `out` folder to `microsoft static server`
+. deploy the `out` folder github static pages through `gh-pages`
+
+
+
+### Workflow
+
+
+```
+$ docker run -v "$(pwd)":/app ssg:latest
+```
+
+1. I first write blogs on `blogs` folder
+1. push the markdown files on github
+1. in github action:
+  1. 

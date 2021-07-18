@@ -68,13 +68,15 @@ body {
   /* margin-left: 1.5rem; */
   /* margin-right: 1.5rem; */
   margin-top: 1rem;
+  margin-left: 2rem
 }
 
 .blog {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 300px;
+  margin-top: 2rem;
+  /* height: 300px; */
 }
 
 .blog img {
@@ -87,9 +89,10 @@ body {
 .blog__left {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  /* margin-left: 2.5rem; */
-  justify-content: center;
+  flex-direction: row;
+  margin-left: 1.5rem;
+  justify-content: flex-start;
+  gap: 1.2rem;
 }
 
 
@@ -180,7 +183,7 @@ blockquote {
   border-left-color: var(--bq-green);
 }
 a {
-  color: var(--green-600);
+  color: var(--green-500);
   font-weight: bold;
 }
 em,
@@ -219,6 +222,13 @@ hr {
 }
 
 @media (min-width: 600px) {
+
+  a {
+    font-size: 1.4rem;
+  }
+  .blogs {
+    margin-left: 2rem
+  }
   .blog {
     flex-direction: column;
     height: auto;
@@ -230,9 +240,9 @@ hr {
     width: auto;
   }
   .blog__left {
-    margin-left: 0rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    /* margin-top: 2rem; */
+    /* margin-bottom: 2rem; */
   }
   main {
     padding-left: 6rem;
@@ -248,11 +258,18 @@ hr {
     font-size: 1.4rem;
   }
 
+  a {
+    font-size: 1.6rem;
+  }
+
   main {
     padding-left: 8rem;
     padding-right: 8rem;
     line-height: 2rem;
     font-size: 1.4rem;
+  }
+  .blogs {
+    margin-left: 4rem
   }
 
   .blog img {
@@ -263,6 +280,9 @@ hr {
 }
 
 @media (min-width: 1200px) {
+  a {
+    font-size: 2rem;
+  }
   body {
     font-size: 1.5rem;
   }
@@ -275,12 +295,14 @@ hr {
     line-height: 2rem;
     font-size: 1.5rem;
   }
-
+  .blogs {
+    margin-left: 24rem
+  }
   .blog {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    height: 400px;
+    /* height: 400px; */
   }
 
   .blog img {
@@ -292,9 +314,11 @@ hr {
   .blog__left {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1.2rem;
     margin-left: 2.5rem;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
