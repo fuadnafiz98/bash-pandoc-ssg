@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker build -t ssg:latest .
+docker tag ssg:latest fuadnafiz98/bps:0.2
+docker push fuadnafiz98/bps:0.2
