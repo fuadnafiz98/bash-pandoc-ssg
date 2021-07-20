@@ -1,19 +1,29 @@
 {
   "links": [
     {
-      "title": "First Blog",
-      "thumbnail": "./assets/img.jpeg",
-      "url": "first-blog"
+      "title": "Design patterns &amp; Software Architecture",
+      "thumbnail": "",
+      "url": "architecture"
     },
     {
-      "title": "second Blog",
-      "thumbnail": "assets/img.jpeg",
-      "url": "second-blog"
+      "title": "Learning Blockchain",
+      "thumbnail": "",
+      "url": "learning-blockchain"
     },
     {
-      "title": "third Blog",
-      "thumbnail": "assets/deep-space-nebula-stars-41162656.jpg",
-      "url": "third-blog"
+      "title": "Cookies",
+      "thumbnail": "",
+      "url": "learning-cookies"
+    },
+    {
+      "title": "Dickering Myself 🐳 in Linux 🐧",
+      "thumbnail": "",
+      "url": "learning-docker"
+    },
+    {
+      "title": "PostgreSQL logical Replication",
+      "thumbnail": "",
+      "url": "postgresql-logical-replication"
     }
   ]
 }

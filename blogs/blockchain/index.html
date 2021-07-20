@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <title>Learning Blockchain</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2><a href="../../">Home</a></h2>
+    </nav>
+  </header>
+  <h1 id="learning-blockchain">Learning Blockchain</h1>
+  <h2 id="frontend-architecture">Frontend Architecture</h2>
+  <ul>
+  <li>client-side: <strong>wallet</strong> &lt;-&gt; <strong>frontend</strong></li>
+  <li>blockchain: <strong>ethereum node</strong> &lt;-&gt; <strong>smart contract</strong></li>
+  <li><strong>client-side</strong> &lt;-&gt; javascript, web3 &lt;-&gt; <strong>blockchain</strong></li>
+  </ul>
+  <h2 id="installation">Installation</h2>
+  <ul>
+  <li>Install Truffle</li>
+  </ul>
+  <p><code>npm install -g truffle</code></p>
+  <ul>
+  <li>Install Ganache</li>
+  </ul>
+  <p><code>npm install -g ganache-cli</code></p>
+  <h2 id="commands">Commands</h2>
+  <ul>
+  <li>To run the frontend go to <code>frontend</code> folder and run</li>
+  </ul>
+  <p><code>truffle develop</code> this will open a prompt in the terminal. To run the migration run <code>migrate --reset</code> here <code>--reset</code> will ignore previous migrations</p>
+  <ul>
+  <li><p><code>truffle migrate</code></p>
+  <ul>
+  <li>this does 2 things
+  <ol type="1">
+  <li>compile the files</li>
+  <li>delopy the smart contracts to blockchain.</li>
+  </ol></li>
+  </ul></li>
+  <li><p>To run the tests, go to the <code>tests</code> folder and run</p></li>
+  </ul>
+  <p><code>truffle test</code></p>
+  <h2 id="sample-code-explanation">Sample Code Explanation</h2>
+  <pre class="solidity"><code>pragma solidity ^0.5.0;
+
+  contract HelloWorld {
+      function hello()
+      pure // doesn&#39;t modify the blockchain
+      public // executable from outside the smart contract
+      returns // specify what it returns
+      (string memory) // return type is string which stores in memory ie. temporary value
+      {
+          return &quot;hello world&quot;;
+      }
+  }</code></pre>
+  <h2 id="terms">TERMS</h2>
+  <ul>
+  <li>abi - application binary interface</li>
+  </ul>
+  <script src="../../assets/js/blog.js"></script>
+</body>
+
+</html>

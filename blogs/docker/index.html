@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <title>Dickering Myself 🐳 in Linux 🐧</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2><a href="../../">Home</a></h2>
+    </nav>
+  </header>
+  <h1 id="dickering-myself-in-linux">Dickering Myself 🐳 in Linux 🐧</h1>
+  <ul>
+  <li>containers share resources</li>
+  <li>containers are lightweight</li>
+  <li>containers are very first to boot up and terminate</li>
+  <li>chroot uses to isolate the filesystem in linux 🐧</li>
+  <li>One of th biggest use cases and strongest drives behind the uptake of containers are microservices</li>
+  </ul>
+  <h2 id="chroot">chroot 🗝</h2>
+  <ul>
+  <li><p>this is kind of linux jails 🏯</p></li>
+  <li><p>make a folder which will be your custom linux distribution 🐧</p></li>
+  <li><p>copy all necessary commands and paste into your folder</p>
+  <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> cp /bin/bash /my-root/bin</span></code></pre></div></li>
+  <li><p>also copy the library files</p>
+  <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> lld /bin/ls</span></code></pre></div></li>
+  <li><p>brand new namespace: <code>$debootstrap --variant=minbase bionic /better-root</code></p></li>
+  <li><p>un sharing: <code>unshare --mount --uts --ipc --net --pid --fork --user --map-root-user chroot /better-root bash</code></p></li>
+  <li><p>mounting</p>
+  <ul>
+  <li><code>mount -t proc none /proc</code></li>
+  <li><code>mount -t sysfs none /sys</code></li>
+  <li><code>mount -t tmpfs none /tmp</code></li>
+  </ul></li>
+  </ul>
+  <h2 id="cgroups">cgroups</h2>
+  <h2 id="from-virtual-machines-to-containers">from virtual machines 💠 to containers 🛢</h2>
+  <ul>
+  <li>a virtual machine is a program that simulates an operating system to a host operating system borrowing some resources from host system.</li>
+  <li>a container has a unique namespace and all processes running inside it will have their share of resources allocated by the container’s control group(cgroup)</li>
+  <li>a container is a package that contains programs, application level binaries and libraries, environment variables, etc. It doesn’t need the os level binaries and libraries. It can demand those binaries and libraries from the resource group</li>
+  </ul>
+  <h2 id="networking">Networking</h2>
+  <ul>
+  <li>On linux Docker manipulates <code>iptables</code> rules to provide network islation.</li>
+  <li><em>Bridge Network</em>: In terms of networking bridge network is a Link layer device which forwards traffic between network segments. Bridge can be a hardware device or software running on host.</li>
+  <li></li>
+  </ul>
+  <h2 id="passing-env-variables-docker-container">Passing env variables docker container</h2>
+  <ul>
+  <li>Example <code>Dockerfile</code></li>
+  </ul>
+  <div class="sourceCode" id="cb3"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="at">FROM alpine:latest</span></span>
+  <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">ENV filePath=&#39;&#39;</span></span>
+  <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">cmd echo hi ${filePath}</span></span></code></pre></div>
+  <ul>
+  <li>RUN <code>$ docker run --rm -e filePath="hello world" basic:1.0</code></li>
+  </ul>
+  <script src="../../assets/js/blog.js"></script>
+</body>
+
+</html>
