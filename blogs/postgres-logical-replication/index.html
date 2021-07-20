@@ -16,7 +16,25 @@
       <h2><a href="../../">Home</a></h2>
     </nav>
   </header>
-  
+  <h1 id="postgresql-logical-replication">🐘 PostgreSQL Logical Replication</h1>
+  <blockquote>
+  <p>also known as <em>transactional replication</em></p>
+  </blockquote>
+  <p>In postgres <code>physical replicaion</code>, each change in the master is streamed through the <strong>WAL</strong>(write-ahead-logging) and applied to destination server.This follows publish subscribe model</p>
+  <h2 id="steps">Steps</h2>
+  <ul>
+  <li>The replicaion starts by copying a snapshot of publishing database to the subscriber. This phase is called <strong>table synchronization phase</strong>.</li>
+  <li>There can be only one synchronization worker per table.</li>
+  <li>Once the copy is done, the subsequent change in the publisher node are sent to the subscriber node as they occur in real-time.</li>
+  <li>The chages are applied in the subscriber in commit order.</li>
+  </ul>
+  <hr />
+  <h3 id="references">References</h3>
+  <ul>
+  <li><a href="https://www.enterprisedb.com/postgres-tutorials/logical-replication-postgresql-explained">1</a></li>
+  <li><a href="https://github.com/kagis/pgwire">lib-0</a></li>
+  <li><a href="https://github.com/kibae/pg-logical-replication">lib-1</a></li>
+  </ul>
   <script src="../../assets/js/blog.js"></script>
 </body>
 
