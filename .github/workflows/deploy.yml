@@ -1,33 +1,29 @@
 name: deploy
 on: push
-jobs: 
+jobs:
   test:
-    name: testing if docker exists
+    name: deploying website
     runs-on: ubuntu-20.04
-    steps: 
+    steps:
       - name: check docker version
-        run:  docker --version
+        run: docker --version
       - name: checkout repo
         uses: actions/checkout@v2
       - name: pulling my repo
-        run:  docker pull fuadnafiz98/bps:0.2
+        run: docker pull fuadnafiz98/bps:0.2
       - name: generating output
-        run:  docker run -v "$(pwd)":/app fuadnafiz98/bps:0.2
-      - name: deploy website 
+        run: docker run -v "$(pwd)":/app fuadnafiz98/bps:0.2
+      - name: deploy website
         uses: peaceiris/actions-gh-pages@v3
         with:
           deply_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-        
-
-
-
 # name: deploy
 
 # on: push
 
-# jobs: 
+# jobs:
 #   test:
 #     name: test job
 #     runs-on: ubuntu-20.04
@@ -50,8 +46,7 @@ jobs:
 #         run : ls -lah out
 #       - name: clone the website
 #         run : cd .. && git clone https://github.com/fuadnafiz98/notes.git && cd notes
-#       - name: move files 
-#         run : mv ../bash-pandoc-ssg/out/* . && ls -lah 
+#       - name: move files
+#         run : mv ../bash-pandoc-ssg/out/* . && ls -lah
 #       - name: push it?
 #         run : git add . && git commit -m "new site deployed" && git remote add origin https://github.com/fuadnafiz98/notes.git && git push origin master
-

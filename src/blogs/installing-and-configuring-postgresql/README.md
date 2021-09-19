@@ -1,3 +1,9 @@
+---
+title: Installing & Configuring PostgreSQL
+thumbnail: ""
+url: "installing-configuring-postgresql"
+...
+
 # Installing & Configuring postgresql
 
 ## Installing postgresql via postgresql apt repository
@@ -11,16 +17,15 @@ sudo apt update
 sudo apt install postgresql-13 postgresql-contrib
 ```
 
-* Enable `postgresql` if it doesn't enabled already. 
-`sudo systemctl start postgresql`
+- Enable `postgresql` if it doesn't enabled already.
+  `sudo systemctl start postgresql`
 
-* Disable `postgresql` if it doesn't enabled already. 
-`sudo systemctl stop postgresql`
+- Disable `postgresql` if it doesn't enabled already.
+  `sudo systemctl stop postgresql`
 
-* Restart `sudo systemctl restart postgresql`
+- Restart `sudo systemctl restart postgresql`
 
-
-## References 
+## References
 
 1. [https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
 1. [https://www.linode.com/docs/guides/how-to-install-use-postgresql-ubuntu-20-04/] (https://www.linode.com/docs/guides/how-to-install-use-postgresql-ubuntu-20-04/)
