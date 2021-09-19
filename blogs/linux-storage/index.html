@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2><a href="../../">Home</a></h2>
+    </nav>
+  </header>
+  <h1 id="linux-storage">Linux Storage</h1>
+  <h2 id="lsblk-to-list-all-the-block-devices."><code>lsblk</code> to list all the block devices.</h2>
+  <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sda</span>      8:0    0 931.5G  0 disk </span>
+  <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├─sda1</span>   8:1    0 465.8G  0 part /mnt/B49635D3963596B8</span>
+  <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">└─sda2</span>   8:2    0 465.8G  0 part /mnt/8AD6BA3FD6BA2AF9</span>
+  <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">sdb</span>      8:16   0 119.2G  0 disk </span>
+  <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">├─sdb1</span>   8:17   0   512M  0 part /boot/efi</span>
+  <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">└─sdb2</span>   8:18   0 118.8G  0 part /</span></code></pre></div>
+  <h2 id="fdisk--l-also-provides-disk-information"><code>fdisk -l</code> also provides disk information</h2>
+  <h2 id="mount-lists-all-the-mounted-disks"><code>mount</code> lists all the mounted disks</h2>
+  <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/dev/sdb2</span> on / type ext4 <span class="er">(</span><span class="ex">rw,relatime,errors=remount-ro</span><span class="kw">)</span></span>
+  <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/dev/sdb1</span> on /boot/efi type vfat <span class="er">(</span><span class="ex">rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro</span><span class="kw">)</span></span></code></pre></div>
+  <script src="../../assets/js/blog.js"></script>
+</body>
+
+</html>

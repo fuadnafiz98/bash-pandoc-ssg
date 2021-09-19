@@ -5,6 +5,8 @@
       "thumbnail": "",
       "url": "architecture"
     },
+    {},
+    {},
     {
       "title": "Learning Blockchain",
       "thumbnail": "",
@@ -20,10 +22,12 @@
       "thumbnail": "",
       "url": "learning-docker"
     },
+    {},
     {
       "title": "PostgreSQL logical Replication",
       "thumbnail": "",
       "url": "postgresql-logical-replication"
-    }
+    },
+    {}
   ]
 }

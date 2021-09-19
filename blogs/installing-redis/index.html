@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2><a href="../../">Home</a></h2>
+    </nav>
+  </header>
+  <h1 id="installing-redis-on-ubuntu-20.04">Installing Redis on Ubuntu 20.04</h1>
+  <p><code>sudo apt update</code></p>
+  <p><code>sudo apt install redis-server</code></p>
+  <p>Open <code>/etc/redis/redis.conf</code> and edit <code>supervised systemd</code></p>
+  <p>Update redis</p>
+  <p><code>sudo systemctl restart redis.service</code></p>
+  <blockquote>
+  <p>If you want to start redis manually everytime server boots then run <code>sudo systemctl disable redis</code></p>
+  </blockquote>
+  <p>Test redis</p>
+  <p><code>redis cli</code></p>
+  <p>Bind redis to localhost</p>
+  <p>open <code>/etc/redis/redis.conf</code> and find the line <code>bind 127.0.0.1 ::1</code> and uncomment it.</p>
+  <script src="../../assets/js/blog.js"></script>
+</body>
+
+</html>

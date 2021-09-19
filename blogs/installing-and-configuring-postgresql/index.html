@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <title></title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2><a href="../../">Home</a></h2>
+    </nav>
+  </header>
+  <h1 id="installing-configuring-postgresql">Installing &amp; Configuring postgresql</h1>
+  <h2 id="installing-postgresql-via-postgresql-apt-repository">Installing postgresql via postgresql apt repository</h2>
+  <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+  <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> apt upgrade</span>
+  <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sh <span class="at">-c</span> <span class="st">&#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;</span></span>
+  <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">--quiet</span> <span class="at">-O</span> <span class="at">-</span> https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add <span class="at">-</span></span>
+  <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+  <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install postgresql-13 postgresql-contrib</span></code></pre></div>
+  <ul>
+  <li><p>Enable <code>postgresql</code> if it doesn’t enabled already. <code>sudo systemctl start postgresql</code></p></li>
+  <li><p>Disable <code>postgresql</code> if it doesn’t enabled already. <code>sudo systemctl stop postgresql</code></p></li>
+  <li><p>Restart <code>sudo systemctl restart postgresql</code></p></li>
+  </ul>
+  <h2 id="references">References</h2>
+  <ol type="1">
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart">https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart</a></li>
+  <li>[https://www.linode.com/docs/guides/how-to-install-use-postgresql-ubuntu-20-04/] (https://www.linode.com/docs/guides/how-to-install-use-postgresql-ubuntu-20-04/)</li>
+  </ol>
+  <script src="../../assets/js/blog.js"></script>
+</body>
+
+</html>
