@@ -5,8 +5,16 @@
       "thumbnail": "",
       "url": "architecture"
     },
-    {},
-    {},
+    {
+      "title": "Installing &amp; Configuring PostgreSQL",
+      "thumbnail": "",
+      "url": "installing-configuring-postgresql"
+    },
+    {
+      "title": "Installing Redis",
+      "thumbnail": "",
+      "url": "installing-redis"
+    },
     {
       "title": "Learning Blockchain",
       "thumbnail": "",
@@ -22,12 +30,20 @@
       "thumbnail": "",
       "url": "learning-docker"
     },
-    {},
+    {
+      "title": "Linux Storage",
+      "thumbnail": "",
+      "url": "linux-storage"
+    },
     {
       "title": "PostgreSQL logical Replication",
       "thumbnail": "",
       "url": "postgresql-logical-replication"
     },
-    {}
+    {
+      "title": "Systemd in Linux",
+      "thumbnail": "",
+      "url": "systemd-in-linux"
+    }
   ]
 }
