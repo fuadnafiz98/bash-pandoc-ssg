@@ -8,7 +8,7 @@
     {
       "title": "Installing &amp; Configuring PostgreSQL",
       "thumbnail": "",
-      "url": "installing-configuring-postgresql"
+      "url": "installing-and-configuring-postgresql"
     },
     {
       "title": "Installing Redis",
@@ -43,7 +43,7 @@
     {
       "title": "Systemd in Linux",
       "thumbnail": "",
-      "url": "systemd-in-linux"
+      "url": "what-is-systemd"
     }
   ]
 }
