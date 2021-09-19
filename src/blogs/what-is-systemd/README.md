@@ -1,7 +1,7 @@
 ---
 title: Systemd in Linux
 thumbnail: ""
-url: "systemd-in-linux"
+url: "what-is-systemd"
 ...
 
 # Systemd in Linux

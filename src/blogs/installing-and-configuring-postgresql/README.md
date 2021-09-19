@@ -1,7 +1,7 @@
 ---
 title: Installing & Configuring PostgreSQL
 thumbnail: ""
-url: "installing-configuring-postgresql"
+url: "installing-and-configuring-postgresql"
 ...
 
 # Installing & Configuring postgresql
