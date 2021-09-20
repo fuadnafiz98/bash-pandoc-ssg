@@ -6,6 +6,11 @@
       "url": "architecture"
     },
     {
+      "title": "cron-in-linux",
+      "thumbnail": "",
+      "url": "cron-in-linux"
+    },
+    {
       "title": "Installing &amp; Configuring PostgreSQL",
       "thumbnail": "",
       "url": "installing-and-configuring-postgresql"
