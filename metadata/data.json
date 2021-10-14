@@ -21,6 +21,11 @@
       "url": "installing-redis"
     },
     {
+      "title": "interview prep",
+      "thumbnail": "",
+      "url": "interview-prep"
+    },
+    {
       "title": "Learning Blockchain",
       "thumbnail": "",
       "url": "learning-blockchain"
@@ -35,6 +40,7 @@
       "thumbnail": "",
       "url": "learning-docker"
     },
+    {},
     {
       "title": "Linux Storage",
       "thumbnail": "",
