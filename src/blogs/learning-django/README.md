@@ -1,3 +1,9 @@
+---
+title: Learning Django 🦕
+thumbnail: ""
+url: "learning-django"
+...
+
 # Learning Django 🦕
 
 ## Django ORM

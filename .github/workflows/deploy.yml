@@ -2,18 +2,18 @@ name: deploy
 on: push
 jobs:
   test:
-    name: deploying website
+    name: 🚀 deploying website
     runs-on: ubuntu-20.04
     steps:
-      - name: check docker version
+      - name: 🐳 check docker version
         run: docker --version
-      - name: checkout repo
+      - name: 🏁 checkout repo
         uses: actions/checkout@v2
-      - name: pulling my repo
+      - name: ⬇ pulling my repo
         run: docker pull fuadnafiz98/bps:0.2
-      - name: generating output
+      - name: ⚙ generating output
         run: docker run -v "$(pwd)":/app fuadnafiz98/bps:0.2
-      - name: deploy website
+      - name: 🛰 deploing website
         uses: peaceiris/actions-gh-pages@v3
         with:
           deply_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
