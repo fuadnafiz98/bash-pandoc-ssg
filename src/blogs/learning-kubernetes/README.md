@@ -7,3 +7,9 @@ A kubernetes cluster is formed with 2 types of resources:
 1.**Master**: which coordinates the cluster.
 2.**Nodes**: where applications are run.
 
+
+
+```cpp
+console.log('hello world')
+```
+
