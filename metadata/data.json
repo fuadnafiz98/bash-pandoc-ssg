@@ -35,7 +35,11 @@
       "thumbnail": "",
       "url": "learning-cookies"
     },
-    {},
+    {
+      "title": "Learning Django 🦕",
+      "thumbnail": "",
+      "url": "learning-django"
+    },
     {
       "title": "Dickering Myself 🐳 in Linux 🐧",
       "thumbnail": "",
